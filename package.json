@@ -1,0 +1,25 @@
+{
+  "name": "chat-angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@uirouter/angularjs": "^1.0.6",
+    "express": "^4.15.4",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "path": "^0.12.7",
+    "socket.io": "^2.0.3",
+    "angular": "^1.6.5",
+    "angular-md5": "^0.1.10",
+    "angular-cookies": "^1.6.5",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "font-awesome": "^4.7.0"
+  }
+}
