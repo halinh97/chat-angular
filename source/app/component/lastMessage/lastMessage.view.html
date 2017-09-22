@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-3 col-sm-12 chatInfo">
+        <input id="filter" type="text" placeholder=" Search" name="filter" ng-model="textFilter">
+        <ul>
+            <li class="clearfix" ng-repeat="message in lastvm.message | filter : textFilter">
+                <a ui-sref="#" target="_blank">
+                    <img class="round" src="{{ message.avatar }}">
+                    <div class="content">
+                        <strong>{{ message.userName }}</strong> {{ message.lastMessage }}
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
