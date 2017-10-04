@@ -1,9 +1,9 @@
-<div class="col-md-3">
-    <div class="left-side">
+<div class="row">
+    <div class="col-md-3 chatInfo">
         <input id="filter" type="text" placeholder=" Search" name="filter" ng-model="textFilter">
         <ul>
-            <li class="clearfix" ng-repeat="message in lastvm.messages | filter : textFilter">
-                <a ui-sref="#" target="_blank">
+            <li class="clearfix" ng-repeat="message in lastvm.message | filter : textFilter">
+                <a ui-sref="home.chatform">
                     <img class="round" src="{{ message.avatar }}">
                     <div class="content">
                         <strong>{{ message.userName }}</strong> {{ message.lastMessage }}
@@ -12,4 +12,4 @@
             </li>
         </ul>
     </div>
-</div>s
+</div>
