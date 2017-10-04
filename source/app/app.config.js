@@ -2,7 +2,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise("/error");
   $stateProvider
       .state('home', {
-          url: '',
+          url: '/',
           views: {
             "" :{
               templateUrl: 'source/app/containers/homeView.html'
@@ -10,7 +10,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           }
       })
       .state('login', {
-          url:'/', 
+          url:'/login',
           controller: 'loginCtrl',
           templateUrl: 'source/app/containers/login/loginView.html'
       })
@@ -20,12 +20,21 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           // controller: 'signinCtrl',
           templateUrl: 'source/app/containers/signin/signinView.html'
       })
-      .state('home.dashboard', {
-          url: '/dashboard',
+      .state('home.chatform', {
+            url: "chatform",
           // controller:'dashboardCtrl',
           views: {
             "":{
-              templateUrl: 'source/app/containers/dashboard/dashboardView.html'
+              templateUrl: 'source/app/components/chatform/chatformView.html'
+            }
+          }
+      })
+      .state('home.dashboard', {
+            url: "/signin",
+          // controller:'dashboardCtrl',
+          views: {
+            "":{
+              templateUrl: 'source/app/containers/signin/signinView.html'
             }
           }
       })
