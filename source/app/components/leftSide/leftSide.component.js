@@ -1,5 +1,5 @@
-app.component('lastMessage',{
-    templateUrl: "component/lastMessage/lastMessage.view.html",
-    controller: 'lastMessageCtrl as lastvm'
+app.component('leftSide',{
+    templateUrl: "component/leftSide/leftSide.view.html",
+    controller: 'leftSideCtrl as lastvm'
 });
 

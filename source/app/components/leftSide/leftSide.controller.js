@@ -1,4 +1,4 @@
-app.controller('lastMessageCtrl', lastMessageCtrl);
+app.controller('leftSideCtrl', lastMessageCtrl);
 
 function lastMessageCtrl() {
     var vm = this;
