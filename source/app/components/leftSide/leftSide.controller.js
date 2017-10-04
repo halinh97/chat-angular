@@ -1,6 +1,6 @@
-app.controller('leftSideCtrl', lastMessageCtrl);
+app.controller('leftSideCtrl', leftSideCtrl);
 
-function lastMessageCtrl() {
+function leftSideCtrl() {
     var vm = this;
     vm.messages = [
         {
