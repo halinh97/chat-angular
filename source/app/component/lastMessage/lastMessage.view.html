@@ -1,15 +1,13 @@
-<div class="col-md-3">
-    <div class="left-side">
-        <input id="filter" type="text" placeholder=" Search" name="filter" ng-model="textFilter">
-        <ul>
-            <li class="clearfix" ng-repeat="message in lastvm.messages | filter : textFilter">
-                <a ui-sref="#" target="_blank">
-                    <img class="round" src="{{ message.avatar }}">
-                    <div class="content">
-                        <strong>{{ message.userName }}</strong> {{ message.lastMessage }}
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>s
+<div class="left-side col-md-3">
+    <input id="filter" type="text" placeholder=" Search" name="filter" ng-model="textFilter">
+    <ul>
+        <li class="clearfix" ng-repeat="message in lastvm.messages | filter : textFilter">
+            <a ui-sref="#" target="_blank">
+                <img class="round" src="{{ message.avatar }}">
+                <div class="content">
+                    <strong>{{ message.userName }}</strong> {{ message.lastMessage }}
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
