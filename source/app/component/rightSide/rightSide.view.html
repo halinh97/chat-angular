@@ -1,0 +1,44 @@
+<div class="col-md-3  right-side">
+    <div class="chat-name">
+        <img class="round" src="{{ rightvm.conversationAvatar }}">
+        <strong>{{ rightvm.conversationName }}</strong>
+        <a uiserf="#"><i class="glyphicon glyphicon-cog pull-right"></i></a>
+    </div>
+    <div class="chat-informations">
+        <div>More Information
+            <a ui-sref="#">
+                <i class="glyphicon glyphicon-option-horizontal pull-right"></i>
+            </a>
+        </div>
+        <ul>
+            <li ng-repeat="info in rightvm.info">
+
+                <i class="{{info.infoIcon}}"></i>
+                 {{info.infoName}}: {{info.infoResult}}
+            </li>
+        </ul>
+    </div>
+    <div class="chat-members">
+        <div>Members
+            <a ui-sref="#">
+                <i class="	glyphicon glyphicon-option-horizontal pull-right"></i>
+            </a>
+        </div>
+
+        <ul>
+            <li>
+                <a ui-sref="#">
+                    <i class="glyphicon glyphicon-plus  small-round add-user"></i>
+                    <p class="user-name">Add user</p>
+                </a>
+            </li>
+            <li ng-repeat="member in rightvm.members">
+                <a ui-sref="#">
+                    <img class="small-round" src="{{ member.avatar }}">
+                    <p class="user-name">{{member.userName}}</p>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
