@@ -1,5 +1,4 @@
 app.component('leftSide',{
-    templateUrl: "component/leftSide/leftSide.view.html",
+    templateUrl: "source/app/components/leftSide/leftSide.view.html",
     controller: 'leftSideCtrl as lastvm'
 });
-

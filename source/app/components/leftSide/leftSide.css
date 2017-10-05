@@ -1,0 +1,51 @@
+/*css for left side*/
+#filter {
+    border-radius: 10px;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 1px solid gainsboro;
+}
+.round {
+    border-radius: 100%;
+    display: block;
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+.left-side {
+    margin-top: 50px;
+    overflow: auto;
+    position: fixed;
+    top:0;
+    left: 0;
+    bottom:0;
+    border: 1px solid gainsboro;
+}
+.clearfix {
+    display: block;
+}
+.left-side ul {
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.left-side li {
+    list-style: none;
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+    border-bottom: 1px solid #ebebe0;
+}
+.left-side div {
+    display: inline;
+}
+
+.left-side strong {
+    display: block;
+    margin: 0 0 4px;
+}
+.left-side .content {
+    float: left;

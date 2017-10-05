@@ -1,0 +1,65 @@
+/*css for right side*/
+.right-side {
+  margin-top: 50px;
+  overflow: auto;
+  position: fixed;
+  top:0;
+  right: 0;
+  bottom:0;
+  border: 1px solid gainsboro;
+}
+.chat-name {
+  display: block;
+  padding: 10px;
+  height: 70px;
+}
+.chat-name strong {
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.chat-name i {
+  margin-top: 15px;
+}
+.chat-informations {
+  border-top: 1px solid gainsboro;
+  height: 200px;
+  border-bottom: 0;
+}
+.chat-informations div {
+  color: lightgray;
+  padding: 15px;
+}
+.chat-informations li {
+  list-style: none;
+  font-size: 125%;
+  margin-top: 15px;
+}
+.chat-members {
+  border-top: 1px solid gainsboro;
+}
+.chat-members div {
+  color: lightgray;
+  padding: 15px;
+}
+.chat-members li {
+  list-style: none;
+  display: block;
+  height: 40px;
+}
+.chat-members .user-name {
+  color: black;
+  padding: 10px;
+  padding-left: 50px;
+}
+.small-round {
+  border-radius: 100%;
+  display: block;
+  height: 35px;
+  width: 35px;
+  float: left;
+}
+.add-user {
+  padding: 10px;
+}
+/*end css for right side*/
