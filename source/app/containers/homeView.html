@@ -15,3 +15,13 @@
   </div>
   <right-side></right-side>
 </div>
+<script>
+    $(document).ready(function () {
+        $(".navbar-inverse").on("mresize", function () {
+            var marginTop = $(".navbar-inverse").height();
+            $("left-side div.left-side, right-side div.right-side").css("margin-top", marginTop + "px");
+            console.log(marginTop);
+        });
+
+    });
+</script>
