@@ -2,7 +2,7 @@
     <input id="filter" type="text" placeholder=" Search" name="filter" ng-model="textFilter">
     <ul>
         <li class="clearfix" ng-repeat="message in lastvm.messages | filter : textFilter">
-            <a ui-sref="#" target="_blank">
+            <a ui-sref="home.chatform">
                 <img class="round" src="{{ message.avatar }}">
                 <div class="content">
                     <strong>{{ message.userName }}</strong> {{ message.lastMessage }}

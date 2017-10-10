@@ -39,6 +39,7 @@
     "socket.io": "^2.0.3"
   },
   "dependencies": {
+    "ejs": "^2.5.7",
     "run-sequence": "^2.2.0",
     "wiredep": "^4.0.0"
   }
