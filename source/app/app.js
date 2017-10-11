@@ -1,1 +1,1 @@
-var app = angular.module('appChat', ['ui.router']);
+var app = angular.module('appChat', ['ui.router','ui.bootstrap']);

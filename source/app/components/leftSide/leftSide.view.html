@@ -1,8 +1,11 @@
 <div class="left-side col-md-3">
-    <input id="filter" type="text" placeholder=" Search" name="filter" ng-model="textFilter">
+    <div>
+        <input id="filter" type="text" placeholder=" Search" name="filter" ng-model="textFilter">
+        <i class="glyphicon glyphicon-edit" ng-click="lastvm.popupForm()"></i>
+    </div>
     <ul>
         <li class="clearfix" ng-repeat="message in lastvm.messages | filter : textFilter">
-            <a ui-sref="home.chatform">
+             <a ui-sref="home.chatform">
                 <img class="round" src="{{ message.avatar }}">
                 <div class="content">
                     <strong>{{ message.userName }}</strong> {{ message.lastMessage }}
@@ -10,4 +13,5 @@
             </a>
         </li>
     </ul>
+
 </div>

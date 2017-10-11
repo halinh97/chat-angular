@@ -1,65 +1,116 @@
-/*css for right side*/
 .right-side {
-  margin-top: 50px;
-  overflow: auto;
-  position: fixed;
-  top:0;
-  right: 0;
-  bottom:0;
-  border: 1px solid gainsboro;
+    margin-top: 50px;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid gainsboro;
 }
+
 .chat-name {
-  display: block;
-  padding: 10px;
-  height: 70px;
+    display: block;
+    padding: 10px;
+    height: 70px;
+
 }
+
 .chat-name strong {
-  display: inline-block;
-  margin-top: 15px;
-  margin-left: 15px;
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 15px;
+    cursor: pointer;
+    cursor: hand;
 }
+
 .chat-name i {
-  margin-top: 15px;
+    margin-top: 15px;
+    cursor: pointer; cursor: hand;
 }
+
+.chat-name div {
+    display: block;
+}
+
 .chat-informations {
-  border-top: 1px solid gainsboro;
-  height: 200px;
-  border-bottom: 0;
+    border-top: 1px solid gainsboro;
+    height: 200px;
+    border-bottom: 0;
 }
+
 .chat-informations div {
-  color: lightgray;
-  padding: 15px;
+    color: lightgray;
+    padding: 15px;
 }
+
 .chat-informations li {
-  list-style: none;
-  font-size: 125%;
-  margin-top: 15px;
+    list-style: none;
+    font-size: 125%;
+    margin-top: 15px;
+    cursor: pointer;
+    cursor: hand;
 }
+
 .chat-members {
-  border-top: 1px solid gainsboro;
+    border-top: 1px solid gainsboro;
 }
+
 .chat-members div {
-  color: lightgray;
-  padding: 15px;
+    color: lightgray;
+    padding: 15px;
 }
+
 .chat-members li {
-  list-style: none;
-  display: block;
-  height: 40px;
+    list-style: none;
+    display: block;
+    height: 40px;
+    cursor: pointer;
+    cursor: hand;
 }
+
 .chat-members .user-name {
-  color: black;
-  padding: 10px;
-  padding-left: 50px;
+    color: black;
+    padding: 10px;
+    padding-left: 50px;
+}
+.chat-members i {
+    cursor: pointer; cursor: hand;
 }
 .small-round {
-  border-radius: 100%;
-  display: block;
-  height: 35px;
-  width: 35px;
-  float: left;
+    border-radius: 100%;
+    display: block;
+    height: 35px;
+    width: 35px;
+    float: left;
 }
+
 .add-user {
-  padding: 10px;
+    padding: 10px;
 }
-/*end css for right side*/
+
+.dropdown-content {
+    display: none;
+    border: 2px solid gainsboro;
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+    position: fixed;
+    right: 0;
+    width: 220px;
+    z-index: 10;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.dropdown-content li {
+    padding: 10px;
+    cursor: pointer;
+    cursor: hand;
+}
+.dropdown-content li+li {
+    border-top: 1px solid gainsboro;
+}
+.dropdown-content li:hover {
+    background-color: #4db8ff;
+    color: white;
+}

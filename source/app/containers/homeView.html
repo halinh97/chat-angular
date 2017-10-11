@@ -1,19 +1,19 @@
-<div class="row">
-  <header-bar></header-bar>
-  <div class="col-sm-3">
-    <left-side></left-side>
-
-  </div>
-  <div>
+<div class='container-fluid'>
+  <div class="row">
+    <header-bar></header-bar>
+    <div class="col-sm-3">
+      <left-side></left-side>
+    </div>
+    <div>
     <!-- <div class="col-sm-3">
     </div> -->
-    <div class="col-sm-6">
-      <div ui-view>
-
+      <div class="col-sm-6">
+        <div ui-view>
+        </div>
       </div>
     </div>
+    <right-side></right-side>
   </div>
-  <right-side></right-side>
 </div>
 <script>
     $(document).ready(function () {

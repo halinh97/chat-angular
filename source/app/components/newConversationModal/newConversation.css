@@ -1,0 +1,59 @@
+.contact {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    width: 320px;
+    max-height: 350px;
+    overflow-y: scroll;
+}
+
+.contact p:first-child {
+    color: gray;
+    background-color: #f5f5ef;
+    padding: 0;
+    padding: 5px;
+}
+
+.friendList {
+    padding: 0;
+
+}
+
+.friendList li {
+    list-style: none;
+    display: block;
+    height: 55px;
+    padding: 10px;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.friendList li:hover {
+    background-color: #ebebe0;
+}
+
+.friendList .user-name {
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+.receiver {
+    list-style: none;
+    padding: 0;
+}
+
+.receiver li {
+    background-color: #99ccff;
+    max-width: 70px;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.receiver span {
+    font-size: 90%;
+    color: black;
+    padding-left: 5px;
+}

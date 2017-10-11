@@ -1,7 +1,17 @@
 app.controller('leftSideCtrl', leftSideCtrl);
 
-function leftSideCtrl() {
+function leftSideCtrl($uibModal) {
     var vm = this;
+    vm.popupForm = function () {
+        var modalInstance = $uibModal.open({
+            templateUrl: 'source/app/components/newConversationModal/newConversation.view.html',
+            controller: 'newConversationCtrl as mvm',
+        });
+
+        modalInstance.result.then(function(data){
+            vm.data.location.reviews.push(data.data);
+        });
+    };
     vm.messages = [
         {
             userName: "Thuy",
