@@ -1,6 +1,6 @@
 app.controller('newConversationCtrl', newConversationCtrl);
 
-function newConversationCtrl($uibModalInstance) {
+function newConversationCtrl($uibModalInstance, $location, conversation) {
     var vm = this;
     vm.name = true;
     vm.friends = [
@@ -25,6 +25,10 @@ function newConversationCtrl($uibModalInstance) {
         }
     ];
     vm.receivers = [];
+    vm.conversationInfo = {
+        name: vm.conversationName,
+        receivers: vm.receivers
+    };
     vm.addReceiver = function (friend) {
         vm.receivers.push(friend.name);
         vm.conversationMember="";
@@ -51,12 +55,17 @@ function newConversationCtrl($uibModalInstance) {
             }
             console.log(vm.conversationName);
             console.log(vm.receivers);
-            vm.doCreateConversation(vm.conversationName, vm.receivers);
+            // vm.doCreateConversation(vm.conversationName, vm.receivers);
         }
     };
-    vm.doCreateConversation = function () {
-
-    };
+    // vm.doCreateConversation = function () {
+    //     vm.formError = "";
+    //     conversation
+    //         .createConversation(vm.conversationInfo)
+    //         .then(function(){
+    //                 $location.path('/');
+    //             });
+    // };
     vm.modal = {
         close: function (result){
             $uibModalInstance.close(result);
@@ -66,3 +75,18 @@ function newConversationCtrl($uibModalInstance) {
         }
     };
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// db.users.update({'name':'thuythuy'},{$set:{'conversations':[{'name': 'nhan' , 'members': ['nhan'], 'messages': []}]}});

@@ -9,40 +9,46 @@
     <title>New wind</title>
     <base href="/">
     <!-- CSS -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="source/app/assets/css/style.css">
-    <link rel="stylesheet" href="source/app/components/headerbar/headerbar.css">
-    <link rel="stylesheet" href="source/app/components/leftSide/leftSide.css">
-    <link rel="stylesheet" href="source/app/components/rightSide/rightSide.css">
-    <link rel="stylesheet" href="source/app/components/newConversationModal/newConversation.css">
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="app/assets/css/style.css">
+    <link rel="stylesheet" href="app/components/headerbar/headerbar.css">
+    <link rel="stylesheet" href="app/components/leftSide/leftSide.css">
+    <link rel="stylesheet" href="app/components/rightSide/rightSide.css">
+    <link rel="stylesheet" href="app/components/newConversationModal/newConversation.css">
 </head>
 
 <body ng-app="appChat">
     <div ui-view></div>
     <!-- Javascripts -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/angular/angular.min.js"></script>
-    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
-    <script src="node_modules/angular-cookies/angular-cookies.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="jquery/dist/jquery.min.js"></script>
+    <script src="angular/angular.min.js"></script>
+    <script src="@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="socket.io-client/socket.io.js"></script>
+    <script src="angular-socket-io/socket.js"></script>
+    <script src="angular-cookies/angular-cookies.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script src="source/app/app.js"></script>
-    <script src="source/app/app.config.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/app.config.js"></script>
 
-    <script src="source/app/lib/ui-bootstrap-custom-2.5.0.min.js"></script>
-    <script src="source/app/lib/ui-bootstrap-custom-tpls-2.5.0.min.js"></script>
+    <script src="app/lib/ui-bootstrap-custom-2.5.0.min.js"></script>
+    <script src="app/lib/ui-bootstrap-custom-tpls-2.5.0.min.js"></script>
 
-    <script src="source/app/components/headerbar/headerbarCtrl.js"></script>
-    <script src="source/app/components/rightSide/rightSide.controller.js" charset="utf-8"></script>
-    <script src="source/app/components/rightSide/rightSide.component.js" charset="utf-8"></script>
-    <script src="source/app/components/leftSide/leftSide.component.js" charset="utf-8"></script>
-    <script src="source/app/components/leftSide/leftSide.controller.js" charset="utf-8"></script>
-    <script src="source/app/components/newConversationModal/newConversation.controller.js" charset="utf-8"></script>
-    <script src="source/app/containers/login/loginCtrl.js"></script>
+    <script src="app/service/authentication.js"></script>
+    <script src="app/service/conversation.js"></script>
+    <script src="app/components/headerbar/headerbarCtrl.js"></script>
+    <script src="app/components/rightSide/rightSide.controller.js" charset="utf-8"></script>
+    <script src="app/components/rightSide/rightSide.component.js" charset="utf-8"></script>
+    <script src="app/components/leftSide/leftSide.component.js" charset="utf-8"></script>
+    <script src="app/components/leftSide/leftSide.controller.js" charset="utf-8"></script>
+    <script src="app/components/newConversationModal/newConversation.controller.js" charset="utf-8"></script>
+    <script src="app/containers/login/loginCtrl.js"></script>
+    <script src="app/containers/register/registerCtrl.js"></script>
+    <script src="app/components/chatform/chatformController.js"></script>
 
-    <script src="source/app/assets/js/mresize.min.js"></script>
-    <script src="source/app/assets/js/header.js"></script>
+    <script src="app/assets/js/mresize.min.js"></script>
+    <script src="app/assets/js/header.js"></script>
 </body>
 
 </html>

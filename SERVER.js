@@ -1,52 +1,36 @@
-var express = require("express");
+var express = require('express');
 var app = express();
+var path = require('path');
+var http = require('http');
+var passport = require('passport');
+var bodyParser = require('body-parser');
 
-app.set("view engine", "ejs");
-// app.set("views", "./views");
+require('./source/app_api/models/db');
+require('./source/app_api/config/passport');
 
-var server = require("http").Server(app);
-var io = require("socket.io")(server);
-server.listen(3000);
+var server = http.createServer(app);
+var io = require('socket.io')(server);
 
-var mangUsers=[];
-var a =[];
+var routesApi = require('./source/app_api/routes/index');
 
-io.on("connection", function(socket){
-  console.log("Co nguoi ket noi " + socket.id);
-
-  socket.on("client-send-Username", function(data){
-    if(mangUsers.indexOf(data)>=0){
-      socket.emit("server-send-dki-thatbai");
-    }else{
-      mangUsers.push(data);
-      socket.Username = data;
-      socket.emit("server-send-dki-thanhcong", data);
-      io.sockets.emit("server-send-danhsach-Users", mangUsers);
-    }
-  });
-
-  // socket.on("logout", function(){
-  //   mangUsers.splice(
-  //     mangUsers.indexOf(socket.Username), 1
-  //   );
-  //   io.sockets.emit("server-send-danhsach-Users",mangUsers);
-  // });
-
-  socket.on("user-send-message", function(data){
-    a.push(data);
-    io.sockets.emit("server-send-msg", a);
-    io.sockets.emit("server-send-mesage", {un:socket.Username, nd:data} );
-  });
-
-
-  socket.on('disconnect', function () {
-    mangUsers.splice(
-      mangUsers.indexOf(socket.Username), 1
-    );
-    io.sockets.emit("server-send-danhsach-Users",mangUsers);
- });
+app.use(passport.initialize());
+app.use(express.static(path.join(__dirname, 'node_modules')));
+app.use(express.static(path.join(__dirname, 'source')));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use('/api', routesApi);
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get("/", function(req, res){
-  res.render("index");
+io.on('connection', function(socket){
+    console.log('ok');
+    socket.on('sendMessage', function(message){
+       io.sockets.emit('newMessage', message) ;
+    });
+});
+
+
+server.listen(8000, function() {
+    console.log('listening on localhost:8000');
 });

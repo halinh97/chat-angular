@@ -4,11 +4,11 @@
         <i class="glyphicon glyphicon-edit" ng-click="lastvm.popupForm()"></i>
     </div>
     <ul>
-        <li class="clearfix" ng-repeat="message in lastvm.messages | filter : textFilter">
+        <li class="clearfix" ng-repeat="conversation in lastvm.conversations | filter : textFilter">
              <a ui-sref="home.chatform">
-                <img class="round" src="{{ message.avatar }}">
+                <img class="round" src="{{ conversation.avatar }}">
                 <div class="content">
-                    <strong>{{ message.userName }}</strong> {{ message.lastMessage }}
+                    <strong>{{ conversation.name }}</strong> {{ conversation.lastMessage }}
                 </div>
             </a>
         </li>

@@ -11,10 +11,11 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="" id="profile">
-                        <img src="https://tapchianhdep.com/wp-content/uploads/2015/04/hinh-anh-3d-ve-naruto-tuyet-dep-6.jpg" class="avatar img-circle" alt=""> Nhàn Nhót
+                    <a href="" id="profile" ng-show="hbvm.isLoggedIn">
+                        <img src="https://tapchianhdep.com/wp-content/uploads/2015/04/hinh-anh-3d-ve-naruto-tuyet-dep-6.jpg" class="avatar img-circle" alt=""> {{hbvm.currentUser.name}}
                     </a>
                 </li>
+                <a ui-sref="login" ng-hide="hbvm.isLoggedIn">Login</a>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href=""><span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -24,7 +25,7 @@
                         <li><a href="">Cuộc trò chuyện đã lưu trữ</a></li>
                         <li><a href="">Cuộc trò chuyện chưa đọc</a></li>
                         <hr class="header">
-                        <li><a href="">Đăng xuất</a></li>
+                        <li  ng-click="hbvm.logout()" ng-show="hbvm.isLoggedIn"><a href="">Đăng xuất</a></li>
                     </ul>
                 </li>
             </ul>

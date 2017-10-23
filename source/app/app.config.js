@@ -1,3 +1,7 @@
+app.config(['$qProvider', function ($qProvider) {
+    $qProvider.errorOnUnhandledRejections(false);
+}]);
+
 app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise("/error");
   $stateProvider
@@ -5,42 +9,42 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           url: '/',
           views: {
             "" :{
-              templateUrl: 'source/app/containers/homeView.html'
+              templateUrl: 'app/containers/homeView.html'
             }
           }
       })
       .state('login', {
           url:'/login',
-          controller: 'loginCtrl',
-          templateUrl: 'source/app/containers/login/loginView.html'
+          controller: 'loginCtrl as lvm',
+          templateUrl: 'app/containers/login/loginView.html'
       })
 
-      .state('signin', {
-          url: "/signin",
-          // controller: 'signinCtrl',
-          templateUrl: 'source/app/containers/signin/signinView.html'
+      .state('register', {
+          url: "/register",
+          controller: 'registerCtrl as rvm',
+          templateUrl: 'app/containers/register/registerView.html'
       })
       .state('home.chatform', {
             url: "chatform",
-          // controller:'dashboardCtrl',
           views: {
             "":{
-              templateUrl: 'source/app/components/chatform/chatformView.html'
+                controller:'chatCtrl as cvm',
+              templateUrl: 'app/components/chatform/chatformView.html'
             }
           }
       })
       .state('home.dashboard', {
             url: "/signin",
-          // controller:'dashboardCtrl',
+          // controllers:'dashboardCtrl',
           views: {
             "":{
-              templateUrl: 'source/app/containers/signin/signinView.html'
+              templateUrl: 'app/containers/signin/signinView.html'
             }
           }
       })
       .state('error', {
           url: "/error",
-          templateUrl: 'source/app/assests/html/err.html'
+          templateUrl: 'app/assests/html/err.html'
       })
 
       // use the HTML5 History API

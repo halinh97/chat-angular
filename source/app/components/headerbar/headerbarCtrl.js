@@ -1,9 +1,16 @@
-function Controller(){
+function headerbarCtrl (authentication, $location) {
+    var vm = this;
+    vm.isLoggedIn = authentication.isLoggedIn();
+    vm.currentUser = authentication.currentUser();
+    vm.logout = function () {
+        authentication.logout();
+        vm.isLoggedIn = false;
+        console.log('ok');
+        $location.path('/');
+    };
 }
-app.component('headerBar',{
-  templateUrl: 'source/app/components/headerbar/headerbarView.html',
-  controller: Controller,
-  controllerAs:'headerbarCtrl'
-
-
-})
+app.controller('headerbarCtrl', headerbarCtrl);
+app.component('headerBar', {
+    templateUrl: 'app/components/headerbar/headerbarView.html',
+    controller: 'headerbarCtrl as hbvm'
+});

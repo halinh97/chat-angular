@@ -4,7 +4,7 @@ function leftSideCtrl($uibModal) {
     var vm = this;
     vm.popupForm = function () {
         var modalInstance = $uibModal.open({
-            templateUrl: 'source/app/components/newConversationModal/newConversation.view.html',
+            templateUrl: 'app/components/newConversationModal/newConversation.view.html',
             controller: 'newConversationCtrl as mvm',
         });
 
@@ -12,7 +12,7 @@ function leftSideCtrl($uibModal) {
             vm.data.location.reviews.push(data.data);
         });
     };
-    vm.messages = [
+    vm.conversations = [
         {
             userName: "Thuy",
             avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdgU9GP6RHmmVKU5K6u5Fs5K2mgbnQNVqBWE2jrRdcbqPEiREe",
