@@ -20,7 +20,7 @@ function loginCtrl (authentication, $location) {
         authentication
             .login(vm.credentials)
             .then(function(){
-                    $location.path('/');
+                    $location.path('/home');
                 },
                 function errorCallback(err){
                     vm.formError = "Email or password is incorrect!";

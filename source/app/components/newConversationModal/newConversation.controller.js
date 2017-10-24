@@ -1,6 +1,6 @@
 app.controller('newConversationCtrl', newConversationCtrl);
 
-function newConversationCtrl($uibModalInstance, $location, conversation) {
+function newConversationCtrl($uibModalInstance) {
     var vm = this;
     vm.name = true;
     vm.friends = [

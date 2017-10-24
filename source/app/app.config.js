@@ -6,7 +6,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise("/error");
   $stateProvider
       .state('home', {
-          url: '/',
+          url: '/home',
           views: {
             "" :{
               templateUrl: 'app/containers/homeView.html'
@@ -14,7 +14,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           }
       })
       .state('login', {
-          url:'/login',
+          url:'/',
           controller: 'loginCtrl as lvm',
           templateUrl: 'app/containers/login/loginView.html'
       })
@@ -25,7 +25,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           templateUrl: 'app/containers/register/registerView.html'
       })
       .state('home.chatform', {
-            url: "chatform",
+            url: "/chatform",
           views: {
             "":{
                 controller:'chatCtrl as cvm',

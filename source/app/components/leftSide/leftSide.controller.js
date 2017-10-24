@@ -3,13 +3,10 @@ app.controller('leftSideCtrl', leftSideCtrl);
 function leftSideCtrl($uibModal) {
     var vm = this;
     vm.popupForm = function () {
+        console.log('clicked');
         var modalInstance = $uibModal.open({
             templateUrl: 'app/components/newConversationModal/newConversation.view.html',
             controller: 'newConversationCtrl as mvm',
-        });
-
-        modalInstance.result.then(function(data){
-            vm.data.location.reviews.push(data.data);
         });
     };
     vm.conversations = [
