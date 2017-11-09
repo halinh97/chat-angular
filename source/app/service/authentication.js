@@ -1,4 +1,4 @@
-app.service('authentication', authentication);
+angular.module('appChat').service('authentication', authentication);
 
 function authentication($window,$http) {
     var getToken = function () {

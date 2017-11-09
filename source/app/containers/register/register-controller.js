@@ -1,4 +1,4 @@
-app.controller('registerCtrl', registerCtrl);
+angular.module('appChat').controller('registerCtrl', registerCtrl);
 function registerCtrl (authentication, $location) {
     var vm = this;
     vm.credentials = {

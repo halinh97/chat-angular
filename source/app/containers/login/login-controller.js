@@ -1,4 +1,4 @@
-app.controller("loginCtrl",loginCtrl);
+angular.module('appChat').controller("loginCtrl",loginCtrl);
 
 function loginCtrl (authentication, $location) {
     var vm = this;

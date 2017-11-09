@@ -1,4 +1,10 @@
-app.controller('chatCtrl', chatCtrl);
+// var app = angular.module('chatform',[]);
+// app.component('chatform',{
+//     templateUrl: 'app/components/chatform/chatform.html',
+//     controller: chatCtrl,
+//     controllerAs: 'chatvm'
+// });
+angular.module('appChat').controller('chatCtrl', chatCtrl);
 function chatCtrl (socketFactory) {
     var socket = socketFactory();
     var vm = this;
@@ -16,5 +22,6 @@ function chatCtrl (socketFactory) {
     };
     socket.on('newMessage', function (message) {
         vm.messages.push(message);
+        console.log(vm.messages);
     })
 }

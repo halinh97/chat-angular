@@ -1,8 +1,8 @@
-app.config(['$qProvider', function ($qProvider) {
+angular.module('appChat').config(['$qProvider', function ($qProvider) {
     $qProvider.errorOnUnhandledRejections(false);
 }]);
 
-app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+angular.module('appChat').config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise("/error");
   $stateProvider
       .state('home', {

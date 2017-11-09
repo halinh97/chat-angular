@@ -1,3 +1,11 @@
+var app = angular.module('headerbar',[]);
+
+app.component('headerBar', {
+    templateUrl: 'app/components/headerbar/headerbar.html',
+    controller: headerbarCtrl,
+    controllerAs: 'hbvm'
+});
+
 function headerbarCtrl (authentication, $location) {
     var vm = this;
     vm.isLoggedIn = authentication.isLoggedIn();
@@ -9,8 +17,3 @@ function headerbarCtrl (authentication, $location) {
         $location.path('/');
     };
 }
-app.controller('headerbarCtrl', headerbarCtrl);
-app.component('headerBar', {
-    templateUrl: 'app/components/headerbar/headerbarView.html',
-    controller: 'headerbarCtrl as hbvm'
-});

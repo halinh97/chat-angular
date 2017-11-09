@@ -4,6 +4,9 @@
     width: 320px;
     max-height: 350px;
     overflow-y: scroll;
+    position: fixed;
+    opacity: 4;
+    background-color: white;
 }
 
 .contact p:first-child {
@@ -15,7 +18,6 @@
 
 .friendList {
     padding: 0;
-
 }
 
 .friendList li {

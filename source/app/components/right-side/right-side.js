@@ -1,4 +1,10 @@
-app.controller('rightSideCtrl', rightSideCtrl);
+var app = angular.module('right-side',[]);
+
+app.component('rightSide',{
+    templateUrl: "app/components/right-side/right-side.html",
+    controller: rightSideCtrl,
+    controllerAs: 'rightvm'
+});
 
 function rightSideCtrl() {
     var vm = this;
