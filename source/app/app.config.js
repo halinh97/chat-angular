@@ -9,27 +9,27 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           url: '/home',
           views: {
             "" :{
-              templateUrl: 'app/containers/homeView.html'
+              templateUrl: 'app/containers/home.html'
             }
           }
       })
       .state('login', {
           url:'/',
           controller: 'loginCtrl as lvm',
-          templateUrl: 'app/containers/login/loginView.html'
+          templateUrl: 'app/containers/login/login.html'
       })
 
       .state('register', {
           url: "/register",
           controller: 'registerCtrl as rvm',
-          templateUrl: 'app/containers/register/registerView.html'
+          templateUrl: 'app/containers/register/register.html'
       })
       .state('home.chatform', {
             url: "/chatform",
           views: {
             "":{
                 controller:'chatCtrl as cvm',
-              templateUrl: 'app/components/chatform/chatformView.html'
+              templateUrl: 'app/components/chatform/chatform.html'
             }
           }
       })
@@ -38,7 +38,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           // controllers:'dashboardCtrl',
           views: {
             "":{
-              templateUrl: 'app/containers/signin/signinView.html'
+              templateUrl: 'app/containers/signin/signin.html'
             }
           }
       })
